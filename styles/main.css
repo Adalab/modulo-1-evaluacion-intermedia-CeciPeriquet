@@ -16,7 +16,8 @@
 /* H E A D E R */
 
 .adalab_header {
-    width: 100vw;
+    width: 100%;
+    background-color: var(--adalab-white);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -46,31 +47,34 @@
 }
 
 .nav_list_item {
-/*  color: var(--adalab-grey); */
- font-size: 1.6rem;
+
  
 }
 
 .nav_list_item a {
     text-decoration: none;
     color: var(--adalab-grey);
+    font-size: 1.6rem;
+    font-weight: 400;
 }
     
 
 /* M A I N */
 
 .adalab_main {
-    height: 80vh;
+    height: 100vh;
     background-color: var(--adalab-green);
     width: 100vw;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
 }
 
 .title_container {
-    width: 50%;
+    width: 30%;
+    padding-top: 10%;
 }
 
 .main_title {
@@ -78,4 +82,35 @@
     font-weight: 700;
     color: var(--adalab-white);
     text-align: center;
+}
+
+@media all and (min-width: 768px) {
+    .adalab_header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    .logo {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+    .nav {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .title_container {
+        width: 20%;
+    }
+    .main_title {
+        font-size: 4rem;
+        
+    }
 }
