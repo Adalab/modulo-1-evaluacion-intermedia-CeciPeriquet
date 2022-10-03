@@ -1,7 +1,7 @@
 * {
     margin: 0;
-    padding:0;
-
+    padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
@@ -16,7 +16,7 @@
 /* H E A D E R */
 
 .adalab_header {
-    width: 100%;
+    width: 100vw;
     background-color: var(--adalab-white);
     display: flex;
     flex-direction: column;
@@ -27,15 +27,10 @@
     padding-bottom: 13px;
     position: sticky;
     top: 0;
-    
 }
 
 .logo {
     width: 155px;
-}
-
-.nav {
-
 }
 
 .nav_list {
@@ -43,12 +38,6 @@
     display: flex;
     justify-content: space-around;
     gap: 20px;
-
-}
-
-.nav_list_item {
-
- 
 }
 
 .nav_list_item a {
@@ -69,20 +58,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 .title_container {
-    width: 30%;
-    padding-top: 10%;
+    width: 50%;
+    text-align: center;
 }
 
 .main_title {
     font-size: 3rem;
     font-weight: 700;
     color: var(--adalab-white);
-    text-align: center;
 }
+
+/* M E D I A Q U E R I E S */
 
 @media all and (min-width: 768px) {
     .adalab_header {
@@ -107,7 +96,7 @@
     }
 
     .title_container {
-        width: 20%;
+        width: 30%;
     }
     .main_title {
         font-size: 4rem;
