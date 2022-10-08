@@ -16,7 +16,8 @@
 /* H E A D E R */
 
 .adalab_header {
-    width: 100vw;
+    /* UPDATE WIDTH (FROM VW TO 100%) */
+    width: 100%;
     background-color: var(--adalab-white);
     display: flex;
     flex-direction: column;
@@ -25,7 +26,8 @@
     gap: 10px;
     padding-top: 10px;
     padding-bottom: 13px;
-    position: sticky;
+    /* UPDATE HEADER POSITION (FROM STICKY TO FIXED) */
+    position: fixed;
     top: 0;
 }
 
@@ -41,45 +43,50 @@
 }
 
 .nav_list_item a {
+    /* ADD PADDING TO LINKS */
+    padding: 10px 10px 13px 10px;
     text-decoration: none;
+    /* ADD UPPERCASE TO MENU */
+    text-transform: uppercase;
     color: var(--adalab-grey);
     font-size: 1.6rem;
     font-weight: 400;
 }
     
-
 /* M A I N */
 
 .adalab_main {
     height: 100vh;
     background-color: var(--adalab-green);
-    width: 100vw;
+    /* UPDATE WIDTH (FROM VW TO 100%) */
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.title_container {
-    width: 50%;
-    text-align: center;
-}
-
 .main_title {
     font-size: 3rem;
     font-weight: 700;
     color: var(--adalab-white);
+    text-align: center;
+     /* ADD CAPITALIZE TO TITLE */
+     text-transform: capitalize;
+     /* BONUS: REMOVE % WITH TO TITLE_CONTAINER
+    AND ADD CH AS SEEN IN CLASS*/
+     width: 11ch;
+     /* BONUS: ADD LETTER-SPACING AS SEEN IN CLASS*/
+     letter-spacing: 2px;
 }
 
 /* M E D I A Q U E R I E S */
 
 @media all and (min-width: 768px) {
     .adalab_header {
-        display: flex;
+        /* DELETE REPEATED STYLES */
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
-        
     }
     .logo {
         padding-top: 20px;
@@ -95,11 +102,10 @@
         padding-right: 30px;
     }
 
-    .title_container {
-        width: 30%;
-    }
+    /* REMOVE TITLE CONTAINER WIDTH 
+    BEACUSE NOW IT´S SET TO CH */
+    
     .main_title {
-        font-size: 4rem;
-        
+        font-size: 4rem; 
     }
 }
